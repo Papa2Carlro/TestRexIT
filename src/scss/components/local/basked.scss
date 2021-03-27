@@ -1,0 +1,45 @@
+.basked {
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    width: 40%;
+
+    padding: 15px 50px 20px;
+
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.22), 0px 12px 12px 0 rgba(0, 0, 0, 0.3);
+    border-style: solid;
+    border-width: 0.5px;
+    border-image-source: linear-gradient(to top, #000000, #000000, rgba(0, 0, 0, 0.02), rgba(140, 140, 140, 0.04), rgba(0, 0, 0, 0.04));
+    border-image-slice: 1;
+    background-color: $white3;
+}
+
+// 1200
+@include media-breakpoint-down(lg) {
+    .card {
+
+    }
+}
+
+// 992
+@include media-breakpoint-down(md) {
+    .card {
+
+    }
+}
+
+// 768
+@include media-breakpoint-down(sm) {
+    .card {
+
+    }
+}
+
+// 576
+@media screen and (max-width: 576px) {
+    .card {
+
+    }
+}
