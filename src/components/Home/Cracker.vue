@@ -1,6 +1,5 @@
 <template>
     <section class="cracker">
-
         <div class="cracker__content">
             <div class="container">
                 <div class="cracker__content-title">About Cracker</div>
@@ -19,7 +18,7 @@
                 </span>
                 </blockquote>
 
-                <img src="../assets/bg/ovs.jpg" alt="" class="cracker__content-img">
+                <img src="../../assets/bg/ovs.jpg" alt="" class="cracker__content-img">
             </div>
 
             <div class="container">
@@ -34,7 +33,7 @@
 
                     <ul class="cracker__constructor-list">
                         <li class="cracker__constructor-item">
-                            <img src="../assets/semen/semen1.svg" alt="" class="cracker__constructor-icon">
+                            <img src="../../assets/semen/semen1.svg" alt="" class="cracker__constructor-icon">
 
                             <input class="cracker__constructor-body green" type="range" min="0" max="100" step="1"
                                    v-model="option1">
@@ -43,7 +42,7 @@
                         </li>
 
                         <li class="cracker__constructor-item">
-                            <img src="../assets/semen/semen2.svg" alt="" class="cracker__constructor-icon">
+                            <img src="../../assets/semen/semen2.svg" alt="" class="cracker__constructor-icon">
 
                             <input class="cracker__constructor-body dark-green" type="range" min="0" max="100" step="1"
                                    v-model="option2">
@@ -52,7 +51,7 @@
                         </li>
 
                         <li class="cracker__constructor-item">
-                            <img src="../assets/semen/semen3.svg" alt="" class="cracker__constructor-icon">
+                            <img src="../../assets/semen/semen3.svg" alt="" class="cracker__constructor-icon">
 
                             <input class="cracker__constructor-body puke" type="range" min="0" max="100" step="1"
                                    v-model="option3">
@@ -61,7 +60,7 @@
                         </li>
 
                         <li class="cracker__constructor-item">
-                            <img src="../assets/semen/semen4.svg" alt="" class="cracker__constructor-icon">
+                            <img src="../../assets/semen/semen4.svg" alt="" class="cracker__constructor-icon">
 
                             <input disabled class="cracker__constructor-body gray" type="range" min="0" max="100"
                                    step="1" v-model="option4">
@@ -70,7 +69,7 @@
                         </li>
 
                         <li class="cracker__constructor-item">
-                            <img src="../assets/semen/semen4.svg" alt="" class="cracker__constructor-icon">
+                            <img src="../../assets/semen/semen4.svg" alt="" class="cracker__constructor-icon">
 
                             <div class="cracker__drop">
                                 <div @click="openKg = !openKg" class="cracker__drop-btn" :class="{isOpen: openKg}">
@@ -90,14 +89,14 @@
                     </ul>
 
                     <button type="submit" class="cracker__constructor-btn">
-                        <span>Add to cart</span><img src="../assets/plus.svg" alt="">
+                        <span>Add to cart</span><img src="../../assets/plus.svg" alt="">
                     </button>
                 </form>
             </div>
         </div>
 
         <div class="cracker__bg">
-            <img src="../assets/bg/bg2.jpg" alt="">
+            <img src="../../assets/bg/bg2.jpg" alt="">
         </div>
     </section>
 </template>
@@ -134,7 +133,7 @@ export default {
             option3: 10,
             option4: 5,
 
-            kg: 12
+            kg: 34
         },
     }),
     computed: {

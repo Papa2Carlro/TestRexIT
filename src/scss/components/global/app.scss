@@ -1,0 +1,69 @@
+body {
+    color: $white;
+
+    &.lock {
+        overflow: hidden;
+    }
+}
+
+#app {
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: 100%;
+    max-width: 920px;
+
+    margin: 0 auto;
+    padding: 0 15px;
+
+    &--relative {
+        position: relative;
+    }
+}
+
+// 1200
+@include media-breakpoint-down(lg) {
+    .container {
+        max-width: 860px;
+    }
+}
+
+// 992
+@include media-breakpoint-down(md) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+// 768
+@include media-breakpoint-down(sm) {
+    .container {
+        max-width: 580px;
+    }
+}
+
+// 576
+@media screen and (max-width: 576px) {
+    .container {
+
+    }
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 3px;
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: rgba($black, .56);
+}
+
+::-webkit-scrollbar-thumb {
+    height: 50px;
+    border-radius: 50px;
+    background-color: $black;
+}

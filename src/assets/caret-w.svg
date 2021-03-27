@@ -4,7 +4,7 @@
         width="0.706cm" height="0.388cm">
     <defs>
         <filter id="Filter_0">
-            <feFlood flood-color="rgb(255, 66, 0)" flood-opacity="1" result="floodOut" />
+            <feFlood flood-color="rgb(255, 255, 255)" flood-opacity="1" result="floodOut" />
             <feComposite operator="atop" in="floodOut" in2="SourceGraphic" result="compOut" />
             <feBlend mode="normal" in="compOut" in2="SourceGraphic" />
         </filter>

@@ -1,0 +1,35 @@
+.main {
+    margin-top: 40px;
+    transition: .3s 0s;
+
+    position: relative;
+    z-index: 2;
+}
+
+// 1200
+@include media-breakpoint-down(lg) {
+    .main {
+
+    }
+}
+
+// 992
+@include media-breakpoint-down(md) {
+    .main {
+        margin-top: 35px;
+    }
+}
+
+// 768
+@include media-breakpoint-down(sm) {
+    .main {
+
+    }
+}
+
+// 576
+@media screen and (max-width: 576px) {
+    .main {
+
+    }
+}

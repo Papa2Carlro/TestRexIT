@@ -1,0 +1,239 @@
+.first {
+    position: relative;
+    height: 680px;
+
+    display: flex;
+    align-items: center;
+
+    &__content {
+        z-index: 1;
+        position: relative;
+
+        width: 100%;
+
+        &-info {
+            display: flex;
+        }
+
+        &-blockquote {
+            max-width: 40vw;
+
+            padding: 20px 30px 30px 0;
+            background-color: rgba($sage, .87);
+        }
+
+        &-text {
+            padding-top: 100px;
+            padding-right: 15px;
+            border-right: 2px solid $white3;
+
+            text-align: right;
+
+            margin-left: auto;
+            max-width: 45%;
+        }
+
+        &-title {
+            font-family: 'Fredoka One', cursive;
+            font-size: 32px;
+
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            line-height: 1.25;
+            color: $white2;
+
+            height: 100%;
+            margin: 20px 0 0 -20px;
+        }
+
+        &-links {
+            position: relative;
+
+            margin-top: 15px;
+
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        &-link {
+            border-radius: 100px;
+            box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.12), 0 3px 3px 0 rgba(0, 0, 0, 0.24);
+            border-image-source: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.04), rgba(140, 140, 140, 0.04));
+            border-image-slice: 1;
+            background: $blood-orange;
+
+            padding: 10px 35px;
+            text-transform: uppercase;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            transition: .3s 0s;
+            font-family: 'Fredoka One', sans-serif;
+            font-size: 24px;
+            color: $white;
+
+            &:hover {
+                color: $white3;
+                background: $red;
+                text-decoration: none;
+            }
+        }
+    }
+
+    &__bg {
+        position: absolute;
+
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+    }
+}
+
+// 1200
+@include media-breakpoint-down(lg) {
+    .first {
+
+        &__content {
+
+            &-blockquote {
+                max-width: 45vw;
+                padding: 20px 30px 25px 0;
+            }
+
+            &-text {
+                max-width: 60%;
+            }
+
+            &-title {
+                font-size: 32px;
+                letter-spacing: 1.2px;
+                line-height: 1.25;
+                margin: 20px 0 0 -15px;
+            }
+
+            &-links {
+                margin-top: 25px;
+            }
+
+            &-link {
+                padding: 8px 30px;
+                font-size: 22px;
+            }
+        }
+    }
+}
+
+// 992
+@include media-breakpoint-down(md) {
+    .first {
+        height: 560px;
+
+        &__content {
+
+            &-blockquote {
+                max-width: 50vw;
+                padding: 15px 20px 25px 0;
+            }
+
+            &-text {
+                padding-right: 10px;
+                max-width: 80%;
+            }
+
+            &-title {
+                font-size: 28px;
+                margin: 15px 0 0 -10px;
+            }
+
+            &-links {
+                margin-top: 25px;
+            }
+
+            &-link {
+                padding: 6px 25px;
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+// 768
+@include media-breakpoint-down(sm) {
+    .first {
+        height: 540px;
+
+        &__content {
+
+            &-blockquote {
+                max-width: 65vw;
+                padding: 15px 20px 20px 0;
+            }
+
+            &-text {
+                margin-top: 70px;
+                padding-top: 15px;
+                padding-right: 0;
+                max-width: 70%;
+
+                border-right: none;
+                border-top: 2px solid $white3;
+            }
+
+            &-title {
+                font-size: 28px;
+                margin: 10px 0 0 -250px;
+            }
+
+            &-links {
+                margin-top: 20px;
+            }
+
+            &-link {
+                padding: 8px 30px;
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+// 576
+@media screen and (max-width: 576px) {
+    .first {
+        height: 500px;
+
+        &__content {
+
+            &-blockquote {
+                max-width: 85vw;
+                padding: 10px 15px 15px 0;
+            }
+
+            &-text {
+                margin-top: 60px;
+                padding-top: 10px;
+                max-width: 80%;
+
+                line-height: 1.25;
+            }
+
+            &-title {
+                font-size: 26px;
+
+                letter-spacing: 1.1px;
+                line-height: 1.1;
+
+                margin: 10px 0 0 -240px;
+            }
+
+            &-links {
+                margin-top: 10px;
+            }
+        }
+    }
+}

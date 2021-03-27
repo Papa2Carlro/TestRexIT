@@ -1,45 +1,341 @@
 .basked {
     position: absolute;
+    z-index: 1;
 
-    top: 0;
+    top: -250px;
     right: 0;
 
-    width: 40%;
+    opacity: 0;
+    visibility: hidden;
 
-    padding: 15px 50px 20px;
+    color: $black;
+    width: 560px;
+
+    transition: .3s 0s ease-in;
+    padding: 15px 40px 20px;
 
     box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.22), 0px 12px 12px 0 rgba(0, 0, 0, 0.3);
-    border-style: solid;
     border-width: 0.5px;
     border-image-source: linear-gradient(to top, #000000, #000000, rgba(0, 0, 0, 0.02), rgba(140, 140, 140, 0.04), rgba(0, 0, 0, 0.04));
     border-image-slice: 1;
     background-color: $white3;
+
+    &__close {
+        position: absolute;
+        cursor: pointer;
+
+        top: 30px;
+        right: 25px;
+
+        span {
+            top: 0;
+            right: 0;
+
+            position: absolute;
+            display: block;
+
+            transition: .3s 0s;
+            width: 24px;
+            height: 4px;
+            background: $black;
+
+            &:first-child {
+                transform: rotate(-45deg);
+            }
+
+            &:last-child {
+                transform: rotate(45deg);
+            }
+        }
+
+        &:hover {
+            span {
+                background: rgba($black, .75);
+            }
+        }
+    }
+
+    &__thumb {
+        display: flex;
+        user-select: none;
+        align-items: center;
+
+        margin-left: 60px;
+
+        &-item {
+            width: 35px;
+            height: 35px;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+
+            & + & {
+                margin-left: 15px;
+            }
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+
+        &-item {
+            display: flex;
+            align-items: center;
+
+            & + & {
+                margin-top: 15px;
+            }
+        }
+
+        &-info {
+            user-select: none;
+            flex: 1;
+
+            display: flex;
+            align-items: center;
+
+            padding-bottom: 2px;
+            border-bottom: 2px solid rgba($black, .1);
+        }
+
+        &-options {
+            flex: 0 0 50px;
+
+            font-family: Lato, sans-serif;
+
+            font-size: 14px;
+            line-height: 100%;
+            color: $blood-orange;
+
+            &--small {
+                flex: 0 0 35px;
+            }
+        }
+
+        &-kg {
+            flex: 1;
+            text-align: center;
+        }
+
+        &-big, &-kg {
+            font-family: Lato, sans-serif;
+            font-size: 18px;
+            line-height: 100%;
+            color: $black
+        }
+
+        &-thumb {
+            user-select: none;
+            width: 34px;
+            height: 34px;
+
+            margin-right: 26px;
+            transform: rotate(-40deg);
+        }
+
+        &-delete {
+            cursor: pointer;
+            position: relative;
+
+            width: 34px;
+            height: 34px;
+
+            margin-left: 26px;
+
+            transition: .3s 0s;
+            border: $black solid 2px;
+            border-radius: 50%;
+
+            span {
+                display: block;
+
+                position: absolute;
+                top: 50%;
+                left: 50%;
+
+                width: 12px;
+                height: 2px;
+                background: $black;
+                transition: .3s 0s;
+
+                &:first-child {
+                    transform: translate(-50%, -50%) rotate(45deg);
+                }
+
+                &:last-child {
+                    transform: translate(-50%, -50%) rotate(-45deg);
+                }
+            }
+
+            &:hover {
+                border-color: rgba($black, .65);
+
+                span {
+                    background: rgba($black, .65);
+                }
+            }
+        }
+    }
+
+    &__empty {
+        font-family: Lato, sans-serif;
+        font-size: 22px;
+        line-height: 100%;
+        color: $black;
+
+        width: 100%;
+        text-align: center;
+        display: block;
+
+        margin: 60px 0;
+    }
+
+    &--open {
+        top: 0;
+
+        opacity: 1;
+        visibility: visible;
+    }
 }
 
 // 1200
 @include media-breakpoint-down(lg) {
-    .card {
+    .basked {
 
     }
 }
 
 // 992
 @include media-breakpoint-down(md) {
-    .card {
+    .basked {
+        width: 480px;
+        padding: 10px 25px;
 
+        &__close {
+            top: 25px;
+            right: 20px;
+
+            span {
+                width: 20px;
+                height: 4px;
+            }
+        }
+
+        &__thumb {
+            margin-left: 50px;
+
+            &-item {
+                width: 30px;
+                height: 30px;
+
+                & + & {
+                    margin-left: 15px;
+                }
+            }
+        }
+
+        &__list {
+
+            &-item {
+
+                & + & {
+                    margin-top: 15px;
+                }
+            }
+
+            &-options {
+                flex: 0 0 45px;
+                font-size: 14px;
+
+                &--small {
+                    flex: 0 0 30px;
+                }
+            }
+
+            &-big, &-kg {
+                font-size: 17px;
+            }
+
+            &-thumb {
+                width: 30px;
+                height: 30px;
+
+                margin-right: 20px;
+            }
+
+            &-delete {
+                width: 30px;
+                height: 30px;
+
+                margin-left: 20px;
+            }
+        }
     }
 }
 
 // 768
 @include media-breakpoint-down(sm) {
-    .card {
-
+    .basked {
+        padding: 10px 20px;
     }
 }
 
 // 576
 @media screen and (max-width: 576px) {
-    .card {
+    .basked {
+        width: 100%;
+        padding: 35px 10px 15px;
 
+        &__thumb {
+            margin-left: 35px;
+
+            &-item {
+                width: 25px;
+                height: 25px;
+
+                & + & {
+                    margin-left: 10px;
+                }
+            }
+        }
+
+        &__list {
+
+            &-options {
+                flex: 0 0 35px;
+                font-size: 13px;
+
+                &--small {
+                    flex: 0 0 25px;
+                }
+            }
+
+            &-big, &-kg {
+                font-size: 16px;
+            }
+
+            &-thumb {
+                width: 25px;
+                height: 25px;
+
+                margin-right: 10px;
+            }
+
+            &-delete {
+                width: 25px;
+                height: 25px;
+
+                margin-left: 10px;
+            }
+        }
+
+        &__empty {
+            font-size: 22px;
+            margin: 45px 0;
+        }
     }
 }
+
